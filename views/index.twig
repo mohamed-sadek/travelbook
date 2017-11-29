@@ -1,10 +1,31 @@
-<ul>
-    {% for record in records %}
-        {% if record.destination %}
-            <li>{{ record.destination }}</li>
-        {% endif %}
-    {% endfor %}
-</ul>
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>GoodTravels</title>
+	<link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+
+<div class="container">
+	<ul class="trips row">
+		{% for record in records %}
+			{% if record.destination %}
+				<li class="trip col">{{ record.destination }}</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+
+	<a href="/add-trip" class="btn btn-primary">Add Trip</a>
+</div>
 
 
-<a href="/add-trip">Add Trip</a>
+
+
+
+{#<script src="js/scripts.js"></script>#}
+</body>
+</html>

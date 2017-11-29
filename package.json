@@ -4,7 +4,9 @@
   "description": "Will update this later",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/*.scss  style/*.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "keywords": [
     "travel"
@@ -12,11 +14,14 @@
   "author": "Mo",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "koa": "2.4.1",
     "koa-bodyparser": "4.2.0",
     "koa-router": "7.3.0",
+    "koa-static": "^4.0.2",
     "koa-views": "6.1.2",
     "mongodb": "2.2.33",
-    "twig": "^1.10.5"
+    "node-sass": "^4.7.2",
+    "twig": "1.10.5"
   }
 }

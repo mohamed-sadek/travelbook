@@ -1,0 +1,10 @@
+<ul>
+    {% for record in records %}
+        {% if record.destination %}
+            <li>{{ record.destination }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+
+<a href="/add-trip">Add Trip</a>

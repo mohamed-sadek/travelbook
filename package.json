@@ -12,9 +12,11 @@
   "author": "Mo",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.4.1",
-    "koa-bodyparser": "^4.2.0",
-    "koa-router": "^7.3.0",
-    "mongodb": "2.2.33"
+    "koa": "2.4.1",
+    "koa-bodyparser": "4.2.0",
+    "koa-router": "7.3.0",
+    "koa-views": "6.1.2",
+    "mongodb": "2.2.33",
+    "twig": "^1.10.5"
   }
 }

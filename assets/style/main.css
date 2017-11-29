@@ -50,3 +50,27 @@ table {
 
 .trip-form .form-control {
   margin: 8px 0; }
+
+.trips {
+  display: flex;
+  justify-content: flex-start; }
+  .trips .trip {
+    margin: 0 8px; }
+    .trips .trip a {
+      width: 100px;
+      height: 100px;
+      padding: 8px;
+      border: 1px solid #efefef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      background: #6aafec;
+      transition: all 0.5s; }
+      .trips .trip a:hover {
+        background: #1b7ed5;
+        text-decoration: none; }
+    .trips .trip:first-child {
+      margin-left: 0; }
+    .trips .trip:last-child {
+      margin-right: 0; }

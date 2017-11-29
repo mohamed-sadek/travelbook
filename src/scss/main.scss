@@ -58,3 +58,38 @@ table {
 		margin: $design-unit 0;
 	}
 }
+
+.trips {
+	display: flex;
+	justify-content: flex-start;
+
+	.trip {
+		margin: 0 $design-unit;
+
+		a {
+			width: 100px;
+			height: 100px;
+			padding: $design-unit;
+			border: 1px solid #efefef;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #ffffff;
+			background: $nice-blue;
+			transition: all 0.5s;
+
+			&:hover {
+				background: darken($nice-blue, 20%);
+				text-decoration: none;
+			}
+		}
+		
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

@@ -27,7 +27,7 @@ router.post('/add-trip', async ctx => {
 	await ctx.app.people.insert(ctx.request.body);
 
 	ctx.status = 200;
-	ctx.redirect('/index');
+	ctx.redirect('/');
 });
 
 app.use(router.routes()).use(router.allowedMethods());

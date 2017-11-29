@@ -9,9 +9,9 @@ const router = new Router();
 
 app.use(BodyParser());
 app.use(serve('.'));
-app.use(Views(__dirname + '/views', {extension: 'twig'}));
+app.use(Views(__dirname + '/views', {extension: 'twig'}, {allowInlineIncludes:true}));
 
-router.get('/index', async ctx => {
+router.get('/', async ctx => {
 	let records = await ctx.app.people.find().toArray();
 
 	await ctx.render('index', {

@@ -44,3 +44,9 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+.trip-form h2 {
+  margin: 8px 0; }
+
+.trip-form .form-control {
+  margin: 8px 0; }

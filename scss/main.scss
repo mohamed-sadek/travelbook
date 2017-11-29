@@ -46,4 +46,15 @@ table {
 	border-spacing: 0;
 }
 
+@import "./variables";
 @import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.trip-form {
+	h2 {
+		margin: $design-unit 0;
+	}
+
+	.form-control {
+		margin: $design-unit 0;
+	}
+}

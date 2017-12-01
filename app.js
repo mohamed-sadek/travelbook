@@ -38,7 +38,6 @@ router.get('/add-trip', async ctx => {
 
 router.post('/add-trip', async ctx => {
     await ctx.app.people.insert(ctx.request.body);
-
     ctx.status = 200;
     ctx.redirect('/');
 });

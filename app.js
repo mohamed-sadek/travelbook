@@ -9,25 +9,38 @@ const router = new Router();
 
 app.use(BodyParser());
 app.use(serve('.'));
-app.use(Views(__dirname + '/views', {extension: 'twig'}, {allowInlineIncludes:true}));
+app.use(
+    Views(__dirname + '/views', {
+        map: {handlebars: 'handlebars'},
+        options: {
+            helpers: {
+
+            },
+
+            partials: {
+                header: './header'
+            }
+        }
+    })
+);
 
 router.get('/', async ctx => {
-	let records = await ctx.app.people.find().toArray();
+    let records = await ctx.app.people.find().toArray();
 
-	await ctx.render('index', {
-		records: records
-	});
+    await ctx.render('index.handlebars', {
+        records: records
+    });
 });
 
 router.get('/add-trip', async ctx => {
-	await ctx.render('add_trip');
+    await ctx.render('add_trip.handlebars');
 });
 
 router.post('/add-trip', async ctx => {
-	await ctx.app.people.insert(ctx.request.body);
+    await ctx.app.people.insert(ctx.request.body);
 
-	ctx.status = 200;
-	ctx.redirect('/');
+    ctx.status = 200;
+    ctx.redirect('/');
 });
 
 app.use(router.routes()).use(router.allowedMethods());

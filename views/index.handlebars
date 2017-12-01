@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>GoodTrips</title>
+    <link rel="stylesheet" href="assets/style/main.css">
+</head>
+
+<body>
+
+{{> header is-active=true }}
+
+<div class="container">
+    <ul class="trips row">
+        {{#each records}}
+            {{# if this.destination }}
+                <li class="trip col"><a href="#">{{ this.destination }}</a></li>
+            {{/if}}
+        {{/each }}
+    </ul>
+</div>
+
+
+<!--<script src="js/scripts.js"></script>-->
+
+</body>
+</html>
